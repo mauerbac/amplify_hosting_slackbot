@@ -1,4 +1,4 @@
-# Amplify Hosting Slackbot
+# Amplify Hosting Slackbot for Build Notifications
 This tutorial will setup a Slack bot to get alerts when new Amplify Hosting builds kickoff and finish. 
 
 This uses an integration with [Amazon Eventbridge](https://aws.amazon.com/pm/eventbridge). We will setup an Eventbridge rule to watch for Amplify events which will trigger a Lambda function that then pings the Slack webhook. 
