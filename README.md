@@ -1,5 +1,5 @@
 # Amplify Hosting Slackbot for Build Notifications
-This tutorial will setup a Slack bot to get alerts when new Amplify Hosting builds kickoff and finish. 
+This tutorial will setup a Slack bot to get alerts when new Amplify Hosting builds kickoff and finish. You can configure the Lambda function to notify any service or automation tool like Zapier. 
 
 This uses an integration with [Amazon Eventbridge](https://aws.amazon.com/pm/eventbridge). We will setup an Eventbridge rule to watch for Amplify events which will trigger a Lambda function that then pings the Slack webhook. 
 
@@ -36,7 +36,7 @@ Eventbridge will post an object with this schema to Lambda
 }
 ```
 
-1. Setup a lambda function to notify whatever service you'd like when an event occurs (ie, Slack, Discord server, Twitter/X, an API). In this tutorial, we will focus on notifying a Slack channel.
+1. Setup a lambda function to notify whatever service you'd like when an event occurs (ie, Slack, Zapier, Discord server, Twitter/X, an API). In this tutorial, we will focus on notifying a Slack channel.
 2. Go to the Lambda service, create a new function. 
 3. I used the [code here](index.mjs)
 4. Save, deploy and test this function.
